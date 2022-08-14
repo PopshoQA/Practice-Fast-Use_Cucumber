@@ -1,9 +1,12 @@
 package com.StepDefinition;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -40,5 +43,13 @@ public class LoginSteps {
 	public void user_should_land_on_home_page() {
 		System.out.println("Step4: user is on Home Page");
 		driver.close();
+	}
+	
+	@When("user enters credential using DataTable")
+	public void user_enters_credential_using_data_table(DataTable dataTable) {
+		System.out.println("Step2: user enters username and PassWD");
+		List<List<String>> data=dataTable.cells();
+	    driver.findElement(By.id("txtUsername")).sendKeys(data.get(0).get(0));
+	    driver.findElement(By.id("txtPassword")).sendKeys(data.get(0).get(1));
 	}
 }
