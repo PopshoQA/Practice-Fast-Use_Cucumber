@@ -12,8 +12,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginSteps {
 	
-	
-	
 	public static WebDriver driver;
 	
 	@Given("user is on loginPage")
@@ -25,12 +23,11 @@ public class LoginSteps {
 		driver.get("https://opensource-demo.orangehrmlive.com/login");
 	}
 		
-	
-	@When("user enters username and password")
-	public void user_enters_username_and_password() {
+	@When("^user enters (.*) and (.*)")
+	public void user_enters_username_and_password(String uName, String pssWD) {
 		System.out.println("Step2: user enters username and PassWD");
-	    driver.findElement(By.id("txtUsername")).sendKeys("admin");
-	    driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+	    driver.findElement(By.id("txtUsername")).sendKeys(uName);
+	    driver.findElement(By.id("txtPassword")).sendKeys(pssWD);
 	}
 
 	@And("click on login button")
