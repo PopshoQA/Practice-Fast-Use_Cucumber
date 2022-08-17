@@ -11,8 +11,9 @@ monochrome=true,
 plugin= {"html:Reports\\HTMLReports",
 		 "json:Reports\\JsonReports\\cucumber.json", 
 		 "junit:Reports\\JUnitReport\\Cucumber.xml"},
-dryRun=false,
-strict=true)
+dryRun=false,  //Mapping between feature file and step file
+strict=true,  //It will check if any step is not defined in step defined file
+tags = "@FunctionalTest and @SmokeTest")
 
 public class Runner {
 

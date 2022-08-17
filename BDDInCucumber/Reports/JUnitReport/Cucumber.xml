@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="85.349">
-    <testcase classname="Test the login funcionality of OrangeHRM Using DataTable" name="Test the valid login using DataTable" time="34.283">
-        <system-out><![CDATA[Given user is on loginPage..................................................passed
-When user enters credential using DataTable.................................passed
-And click on login button...................................................passed
-Then user should land on home page..........................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.464">
+    <testcase classname="Using of tag in cucumber" name="Demo Tags" time="0.081">
+        <system-out><![CDATA[Given this is scenario......................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Test the login funcionality of OrangeHRM" name="Test the valid login" time="25.841">
-        <system-out><![CDATA[Given user is on loginPage..................................................passed
-When user enters admin and admin123.........................................passed
-And click on login button...................................................passed
-Then user should land on home page..........................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Test the login funcionality of OrangeHRM" name="Test the valid login 2" time="24.952">
-        <system-out><![CDATA[Given user is on loginPage..................................................passed
-When user enters admin1 and admin1234.......................................passed
-And click on login button...................................................passed
-Then user should land on home page..........................................passed
+    <testcase classname="Using of tag in cucumber" name="Demo Tags2" time="0.001">
+        <system-out><![CDATA[Given this is scenario2.....................................................passed
 ]]></system-out>
     </testcase>
 </testsuite>
